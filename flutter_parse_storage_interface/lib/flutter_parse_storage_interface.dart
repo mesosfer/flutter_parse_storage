@@ -31,10 +31,10 @@ abstract class FlutterParseStorageInterface {
   bool get isMock => false;
 
   /// Return the [Map] from a key
-  Future<Map<String, Object>?> get(String key);
+  Future<Map<String, Object?>?> get(String key);
 
   /// Set [Map] data using current key
-  Future<bool> put(String key, Map<String, Object> data);
+  Future<bool> put(String key, Map<String, Object?> data);
 
   /// Clear current key data, or all of it if `key` is not set
   Future<bool> clear({String? key});
@@ -50,13 +50,14 @@ abstract class FlutterParseStorageInterface {
 
 class InMemoryFlutterParseStorage extends FlutterParseStorageInterface {
   /// Instantiates an empty in-memory preferences store.
-  InMemoryFlutterParseStorage.empty() : _data = <String, Map<String, Object>>{};
+  InMemoryFlutterParseStorage.empty()
+      : _data = <String, Map<String, Object?>>{};
 
   /// Instantiates an in-memory preferences store containing a copy of [data].
-  InMemoryFlutterParseStorage.withData(Map<String, Map<String, Object>> data)
+  InMemoryFlutterParseStorage.withData(Map<String, Map<String, Object?>> data)
       : _data = Map<String, Map<String, Object>>.from(data);
 
-  final Map<String, Map<String, Object>> _data;
+  final Map<String, Map<String, Object?>> _data;
 
   @override
   Future<bool> clear({String? key}) async {
@@ -69,12 +70,12 @@ class InMemoryFlutterParseStorage extends FlutterParseStorageInterface {
   }
 
   @override
-  Future<Map<String, Object>?> get(String key) async {
+  Future<Map<String, Object?>?> get(String key) async {
     return _data[key];
   }
 
   @override
-  Future<bool> put(String key, Map<String, Object> data) async {
+  Future<bool> put(String key, Map<String, Object?> data) async {
     _data[key] = data;
     return true;
   }

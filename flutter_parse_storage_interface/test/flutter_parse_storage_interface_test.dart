@@ -28,7 +28,7 @@ class IllegalImplementation implements FlutterParseStorageInterface {
   }
 
   @override
-  Future<bool> put(String key, Map<String, Object> data) {
+  Future<bool> put(String key, Map<String, Object?> data) {
     throw UnimplementedError();
   }
 
