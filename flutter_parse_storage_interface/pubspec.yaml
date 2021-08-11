@@ -1,0 +1,15 @@
+name: flutter_parse_storage_interface
+description: A common platform interface for the flutter_parse local storage plugin.
+version: 1.0.0
+repository: https://github.com/mesosfer/flutter_parse_storage/flutter_parse_storage_interface
+issue_tracker: https://github.com/mesosfer/flutter_parse_storage/issues?q=is%3Aissue+is%3Aopen+label%3A%22p%3A+flutter_parse_storage%22
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  meta: ^1.7.0
+
+dev_dependencies:
+  pedantic: ^1.9.0
+  test: ^1.14.4
