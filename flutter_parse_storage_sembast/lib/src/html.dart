@@ -3,9 +3,9 @@ import 'package:sembast_web/sembast_web.dart';
 
 import 'interface.dart';
 
-/// Implementation of [FlutterParseStorageSembast] using [databaseFactoryWeb]
-class FlutterParseStorageSembast extends BaseFlutterParseStorageSembast {
-  FlutterParseStorageSembast({required String path, String? databaseName})
+/// Implementation of [ParseStorageSembast] using [databaseFactoryWeb]
+class ParseStorageSembast extends BaseParseStorageSembast {
+  ParseStorageSembast({required String path, String? databaseName})
       : super(path: path, databaseName: databaseName);
 
   Database? _database;

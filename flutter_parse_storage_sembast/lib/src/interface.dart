@@ -2,9 +2,9 @@ import 'package:flutter_parse_storage_interface/flutter_parse_storage_interface.
 import 'package:sembast/sembast.dart';
 
 /// Base Implementation of `flutter_parse_storage` with `sembast`
-abstract class BaseFlutterParseStorageSembast
-    extends FlutterParseStorageInterface {
-  BaseFlutterParseStorageSembast({required this.path, this.databaseName});
+abstract class BaseParseStorageSembast
+    extends ParseStorageInterface {
+  BaseParseStorageSembast({required this.path, this.databaseName});
 
   /// Return the database path directory where it will be saved
   final String path;

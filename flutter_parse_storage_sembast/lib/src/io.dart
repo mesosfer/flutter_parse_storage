@@ -3,9 +3,9 @@ import 'package:sembast/sembast_io.dart';
 
 import 'interface.dart';
 
-/// Implementation of [FlutterParseStorageSembast] using [databaseFactoryIo]
-class FlutterParseStorageSembast extends BaseFlutterParseStorageSembast {
-  FlutterParseStorageSembast({required String path, String? databaseName})
+/// Implementation of [ParseStorageSembast] using [databaseFactoryIo]
+class ParseStorageSembast extends BaseParseStorageSembast {
+  ParseStorageSembast({required String path, String? databaseName})
       : super(path: path, databaseName: databaseName);
 
   Database? _database;
