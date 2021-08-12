@@ -4,15 +4,15 @@ library flutter_parse_storage_interface;
 import 'package:meta/meta.dart';
 
 /// Local storage manager for internal library use
-abstract class FlutterParseStorageInterface {
-  /// The default instance of [FlutterParseStorageInterface] to use.
+abstract class ParseStorageInterface {
+  /// The default instance of [ParseStorageInterface] to use.
   ///
-  /// Defaults to [InMemoryFlutterParseStorage.empty()].
-  static FlutterParseStorageInterface get instance => _instance;
+  /// Defaults to [InMemoryParseStorage.empty()].
+  static ParseStorageInterface get instance => _instance;
 
   /// Platform-specific plugins should set this with their own platform-specific
-  /// class that extends [FlutterParseStorageInterface] when they register themselves.
-  static set instance(FlutterParseStorageInterface value) {
+  /// class that extends [ParseStorageInterface] when they register themselves.
+  static set instance(ParseStorageInterface value) {
     if (!value.isMock) {
       try {
         value._verifyProvidesDefaultImplementations();
@@ -24,8 +24,7 @@ abstract class FlutterParseStorageInterface {
     _instance = value;
   }
 
-  static FlutterParseStorageInterface _instance =
-      InMemoryFlutterParseStorage.empty();
+  static ParseStorageInterface _instance = InMemoryParseStorage.empty();
 
   @visibleForTesting
   bool get isMock => false;
@@ -39,7 +38,7 @@ abstract class FlutterParseStorageInterface {
   /// Clear current key data, or all of it if `key` is not set
   Future<bool> clear({String? key});
 
-  // This method makes sure that FlutterParseStorageInterface isn't implemented with `implements`.
+  // This method makes sure that ParseStorageInterface isn't implemented with `implements`.
   //
   // See class doc for more details on why implementing this class is forbidden.
   //
@@ -48,13 +47,12 @@ abstract class FlutterParseStorageInterface {
   void _verifyProvidesDefaultImplementations() {}
 }
 
-class InMemoryFlutterParseStorage extends FlutterParseStorageInterface {
+class InMemoryParseStorage extends ParseStorageInterface {
   /// Instantiates an empty in-memory preferences store.
-  InMemoryFlutterParseStorage.empty()
-      : _data = <String, Map<String, Object?>>{};
+  InMemoryParseStorage.empty() : _data = <String, Map<String, Object?>>{};
 
   /// Instantiates an in-memory preferences store containing a copy of [data].
-  InMemoryFlutterParseStorage.withData(Map<String, Map<String, Object?>> data)
+  InMemoryParseStorage.withData(Map<String, Map<String, Object?>> data)
       : _data = Map<String, Map<String, Object>>.from(data);
 
   final Map<String, Map<String, Object?>> _data;

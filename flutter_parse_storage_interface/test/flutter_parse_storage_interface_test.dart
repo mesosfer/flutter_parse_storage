@@ -2,11 +2,11 @@ import 'package:flutter_parse_storage_interface/flutter_parse_storage_interface.
 import 'package:test/test.dart';
 
 void main() {
-  group(FlutterParseStorageInterface, () {
+  group(ParseStorageInterface, () {
     test('disallows implementing interface', () {
       expect(
         () {
-          FlutterParseStorageInterface.instance = IllegalImplementation();
+          ParseStorageInterface.instance = IllegalImplementation();
         },
         throwsA(isA<AssertionError>()),
       );
@@ -14,7 +14,7 @@ void main() {
   });
 }
 
-class IllegalImplementation implements FlutterParseStorageInterface {
+class IllegalImplementation implements ParseStorageInterface {
   IllegalImplementation() : super();
 
   @override

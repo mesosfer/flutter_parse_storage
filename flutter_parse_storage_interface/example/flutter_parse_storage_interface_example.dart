@@ -1,12 +1,11 @@
 import 'package:flutter_parse_storage_interface/flutter_parse_storage_interface.dart';
 
-class InMemoryFlutterParseStorage extends FlutterParseStorageInterface {
+class InMemoryParseStorage extends ParseStorageInterface {
   /// Instantiates an empty in-memory preferences store.
-  InMemoryFlutterParseStorage.empty()
-      : _data = <String, Map<String, Object?>>{};
+  InMemoryParseStorage.empty() : _data = <String, Map<String, Object?>>{};
 
   /// Instantiates an in-memory preferences store containing a copy of [data].
-  InMemoryFlutterParseStorage.withData(Map<String, Map<String, Object?>> data)
+  InMemoryParseStorage.withData(Map<String, Map<String, Object?>> data)
       : _data = Map<String, Map<String, Object>>.from(data);
 
   final Map<String, Map<String, Object?>> _data;
