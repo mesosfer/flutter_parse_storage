@@ -1,0 +1,17 @@
+name: flutter_parse_storage_sembast
+description: The implementation of flutter_parse_storage_interface using sembast.
+version: 1.0.0
+repository: https://github.com/mesosfer/flutter_parse_storage/flutter_parse_storage_sembast
+issue_tracker: https://github.com/mesosfer/flutter_parse_storage/issues?q=is%3Aissue+is%3Aopen+label%3A%22p%3A+flutter_parse_storage_sembast%22
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  flutter_parse_storage_interface: ^1.0.0
+  sembast: ^3.1.0+2
+  sembast_web: ^2.0.0+2
+
+dev_dependencies:
+  pedantic: ^1.9.0
+  test: ^1.14.4
