@@ -1,6 +1,6 @@
 name: flutter_parse_storage_shared_preferences
 description: The implementation of flutter_parse_storage_interface using shared_preferences.
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/mesosfer/flutter_parse_storage/tree/main/flutter_parse_storage_shared_preferences
 issue_tracker: https://github.com/mesosfer/flutter_parse_storage/issues?q=is%3Aissue+is%3Aopen+label%3A%22p%3A+flutter_parse_storage_shared_preferences%22
 
@@ -9,7 +9,7 @@ environment:
   flutter: ">=1.20.0"
 
 dependencies:
-  flutter_parse_storage_interface: ^1.0.1
+  flutter_parse_storage_interface: ^1.0.2
   shared_preferences: ^2.0.6
 
 dev_dependencies:

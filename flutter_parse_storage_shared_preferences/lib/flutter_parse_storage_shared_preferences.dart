@@ -7,9 +7,8 @@ import 'package:flutter_parse_storage_interface/flutter_parse_storage_interface.
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Implementation of `flutter_parse_storage` with `shared_preferences`
-class FlutterParseStorageSharedPreferences
-    extends FlutterParseStorageInterface {
-  FlutterParseStorageSharedPreferences();
+class ParseStorageSharedPreferences extends ParseStorageInterface {
+  ParseStorageSharedPreferences();
 
   @override
   bool get isMock => false;

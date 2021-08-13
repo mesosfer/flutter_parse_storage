@@ -3,8 +3,7 @@ import 'package:flutter_parse_storage_shared_preferences/flutter_parse_storage_s
 
 void main() {
   // setup parse local storage instance using sembast
-  FlutterParseStorageInterface.instance =
-      FlutterParseStorageSharedPreferences();
+  ParseStorageInterface.instance = ParseStorageSharedPreferences();
 
   // initialize flutter_parse
 
